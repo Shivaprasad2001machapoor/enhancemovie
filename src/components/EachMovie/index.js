@@ -4,28 +4,14 @@ import './index.css'
 
 const EachMovie = props => {
   const {movieData} = props
-  const {
-    id,
-    adult,
-    backdropPath,
-    originalLanguage,
-    originalTitle,
-    overview,
-    popularity,
-    posterPath,
-    releaseDate,
-    title,
-    video,
-    voteAverage,
-    voteCount,
-  } = movieData
+  const {id, overview, posterPath, releaseDate, title, voteAverage} = movieData
 
   return (
     <Link to={`/movie/${id}`} className="link-item">
       <li className="product-item">
         <div className="movie-details">
           <img
-            src={`https://image.tmdb.org/t/p/original/${posterPath}`}
+            src={`https://image.tmdb.org/t/p/w500${posterPath}`}
             alt={posterPath}
             className="movie-poster"
           />
@@ -34,7 +20,7 @@ const EachMovie = props => {
             <p className="movie-overview">{overview}</p>
             <p className="movie-release-date">Release Date: {releaseDate}</p>
             <p className="movie-vote-average">Vote Average: {voteAverage}</p>
-            <button>View Details</button>
+            <button type="button">View Details</button>
           </div>
         </div>
       </li>

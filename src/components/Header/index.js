@@ -32,6 +32,7 @@ const Header = () => (
               onChange={onChangeSearchInput}
               placeholder="Search..."
             />
+            <button type="button">Search</button>
           </div>
         </nav>
       )
